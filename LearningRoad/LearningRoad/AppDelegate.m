@@ -37,7 +37,7 @@
         }];
         self.window.rootViewController = ctrl;
     }
-    
+    NSLog(@"123");
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
