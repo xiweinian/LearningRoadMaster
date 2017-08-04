@@ -241,7 +241,7 @@ static const CGFloat   KSliderHeight    = 3.0f;
         }else{
             _leftIndicator.hidden = NO;
         }
-        BOOL showRight =  self.bgScrollView.contentOffset.x+self.bgScrollView.frame.size.width<=self.bgScrollView.contentSize.width;
+        BOOL showRight = fabs(self.bgScrollView.contentOffset.x+self.bgScrollView.frame.size.width-self.bgScrollView.contentSize.width) >= 1.0f;
         _rightIndicator.hidden = !showRight;
         
     }else{
