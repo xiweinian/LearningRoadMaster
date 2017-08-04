@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6BCCE8BF0A554BC9E0B5FBDC /* libPods-LearningRoad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86789823F962D715FFFEDC29 /* libPods-LearningRoad.a */; };
+		D58979AC1F34082A009A1D78 /* ScrollViewSegmentControlCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = D58979AB1F34082A009A1D78 /* ScrollViewSegmentControlCtrl.m */; };
 		D5A275831F0F6258005F63CE /* HLScrollSegmentControl.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A275821F0F6258005F63CE /* HLScrollSegmentControl.m */; };
 		D5A56ACF1EDFFE93007C3298 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A56ACE1EDFFE93007C3298 /* main.m */; };
 		D5A56AD21EDFFE93007C3298 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A56AD11EDFFE93007C3298 /* AppDelegate.m */; };
@@ -181,6 +182,8 @@
 		600EFE31F705F6D494812225 /* Pods-LearningRoad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningRoad.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningRoad/Pods-LearningRoad.release.xcconfig"; sourceTree = "<group>"; };
 		86789823F962D715FFFEDC29 /* libPods-LearningRoad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearningRoad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3529ADD68A2E7AC85EDFFB /* Pods-LearningRoad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningRoad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningRoad/Pods-LearningRoad.debug.xcconfig"; sourceTree = "<group>"; };
+		D58979AA1F34082A009A1D78 /* ScrollViewSegmentControlCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollViewSegmentControlCtrl.h; sourceTree = "<group>"; };
+		D58979AB1F34082A009A1D78 /* ScrollViewSegmentControlCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollViewSegmentControlCtrl.m; sourceTree = "<group>"; };
 		D5A275811F0F6258005F63CE /* HLScrollSegmentControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLScrollSegmentControl.h; sourceTree = "<group>"; };
 		D5A275821F0F6258005F63CE /* HLScrollSegmentControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLScrollSegmentControl.m; sourceTree = "<group>"; };
 		D5A275841F0F6E0B005F63CE /* HLCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLCommon.h; sourceTree = "<group>"; };
@@ -1061,6 +1064,8 @@
 			children = (
 				D5B305E61EE0F727002CA95D /* HomePageViewCtrl.h */,
 				D5B305E71EE0F727002CA95D /* HomePageViewCtrl.m */,
+				D58979AA1F34082A009A1D78 /* ScrollViewSegmentControlCtrl.h */,
+				D58979AB1F34082A009A1D78 /* ScrollViewSegmentControlCtrl.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1507,6 +1512,7 @@
 				D5A56C201EE00128007C3298 /* UINavigationController+HiddenWhenPushed.m in Sources */,
 				D5A56C7B1EE007DF007C3298 /* TZImageManager.m in Sources */,
 				D5A56C251EE00128007C3298 /* UIView+DashLine.m in Sources */,
+				D58979AC1F34082A009A1D78 /* ScrollViewSegmentControlCtrl.m in Sources */,
 				D5A56BCF1EE0011E007C3298 /* HLPageControlView.m in Sources */,
 				D5B3063D1EE153BD002CA95D /* HLNavView.m in Sources */,
 				D5A56C281EE00128007C3298 /* RequestViewModel.m in Sources */,

@@ -13,18 +13,25 @@
 #import "HLNavView.h"
 #import "HLZheDieView.h"
 #import "HLScreenCutBtn.h"
+#import "ScrollViewSegmentControlCtrl.h"
+#import <objc/runtime.h>
+
 @interface HomePageViewCtrl ()<UITableViewDelegate,UITableViewDataSource,HLAdvScrollViewDelegate,HLZheDieViewDelegate>
 @property (nonatomic,strong) UITableView *tableView;
 @property (nonatomic,strong) HLAdvScrollView *advHeaderView;
 @property (nonatomic,strong) HLNavView *navView;
 @property (nonatomic,strong) HLZheDieView *bottomView;
 @property (nonatomic,strong) HLScreenCutBtn *screenCutBtn;
+@property (nonatomic,strong) NSMutableArray *dataArray;
+@property (nonatomic,strong) NSMutableArray *viewControllerArr;
 @end
 
 @implementation HomePageViewCtrl
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.dataArray = [@[@"HlScrollSegmentControlDemo"]mutableCopy];
+    self.viewControllerArr = [@[@"ScrollViewSegmentControlCtrl"] mutableCopy];
     self.automaticallyAdjustsScrollViewInsets = NO;
     self.title = @"首页";
     [self.view addSubview:self.tableView];
@@ -47,7 +54,7 @@
 
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 30;
+    return _dataArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -56,9 +63,14 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellName];
     }
+    cell.textLabel.text = [NSString stringWithFormat:@"%ld、%@",(long)indexPath.row,[_dataArray objectAtIndex:indexPath.row]];
     return cell;
 }
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *controllerName = [self.viewControllerArr objectAtIndex:indexPath.row];
+    HLBaseViewController *ctrl = (HLBaseViewController*)[[NSClassFromString(controllerName) alloc] init];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
 
 
 
